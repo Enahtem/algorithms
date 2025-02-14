@@ -1,13 +1,12 @@
-numbers = [2,3,5,8,1,9]
+numbers = [2,3,0,5,8,1,9]
 
-for i in range(1,len(numbers)):
-    val = numbers[i]
-    for j in reversed(range(i)):
-        numbers[j+1] = numbers[j]
-        if (numbers[j]<=val):
-            numbers[j+1]=val
-            break
-        elif (j==0):
-            numbers[0]=val
+for i in range(len(numbers)):
+    value = numbers[i]
+    j = i
+    while j>0 and numbers[j-1]>value:
+        numbers[j]=numbers[j-1]
+        j-=1
+    numbers[j] = value
 
 print(numbers)
+

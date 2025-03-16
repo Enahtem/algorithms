@@ -20,7 +20,7 @@ def partition(numbers, low, high):
 
 
 def quick_sort(numbers, low=0, high=None):
-    if high == None:
+    if high is None:
         high = len(numbers) - 1
     if low >= high:
         return numbers
